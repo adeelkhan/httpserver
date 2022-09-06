@@ -62,7 +62,6 @@ func processHttpRequest(conn net.Conn) {
 	url := processHeader(conn)
 	if url == "" {
 		response404Error(conn)
-
 		return
 	}
 	outFile, len := readFile(url)
